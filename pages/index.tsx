@@ -7,6 +7,7 @@ const Home: NextPage = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isCursorVisible, setIsCursorVisible] = useState(false);
+  const [activeFilter, setActiveFilter] = useState("All");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +55,10 @@ const Home: NextPage = () => {
 
   const handleBubbleClick = () => {
     alert("Thank you for your interest! I'm available for hire. Let's discuss your project.");
+  };
+
+  const handleFilterClick = (filter: string) => {
+    setActiveFilter(filter);
   };
 
   return (
@@ -155,31 +160,48 @@ const Home: NextPage = () => {
         <section id="works" className={styles.works}>
           <h2 className={styles.sectionTitle}>Works</h2>
           <div className={styles.workFilter}>
-            <button className={styles.filterActive}>All</button>
-            <button>Branding</button>
-            <button>Product</button>
-            <button>UI/UX</button>
+            {["All", "Branding", "Product", "UI/UX"].map((filter) => (
+              <button
+                key={filter}
+                className={`${styles.filterButton} ${activeFilter === filter ? styles.filterActive : ''}`}
+                onClick={() => handleFilterClick(filter)}
+              >
+                {filter}
+              </button>
+            ))}
           </div>
           <div className={styles.workGrid}>
             <div className={styles.workItem}>
-              <img src="/work-1.jpg" alt="B&O" />
-              <h3>B&O</h3>
-              <p>Marketing site design and build</p>
+              <img src="/tetris-game.png" alt="B&O" />
+              <div className={styles.workItemContent}>
+                <h3>B&O</h3>
+                <p>Marketing site design and build</p>
+                <button className={styles.expandButton}>↗</button>
+              </div>
             </div>
             <div className={styles.workItem}>
-              <img src="/work-2.jpg" alt="Cozmetic" />
-              <h3>Cozmetic</h3>
-              <p>Marketing site design and build</p>
+              <img src="/ui-animations.png" alt="Cozmetic" />
+              <div className={styles.workItemContent}>
+                <h3>Cozmetic</h3>
+                <p>Marketing site design and build</p>
+                <button className={styles.expandButton}>↗</button>
+              </div>
             </div>
             <div className={styles.workItem}>
-              <img src="/work-3.jpg" alt="Xendou" />
-              <h3>Xendou</h3>
-              <p>Marketing site design and build</p>
+              <img src="airrupies.png" alt="Xendou" />
+              <div className={styles.workItemContent}>
+                <h3>Xendou</h3>
+                <p>Marketing site design and build</p>
+                <button className={styles.expandButton}>↗</button>
+              </div>
             </div>
             <div className={styles.workItem}>
-              <img src="/work-4.jpg" alt="Blvck" />
-              <h3>Blvck</h3>
-              <p>Marketing site design and build</p>
+              <img src="/background.png" alt="Blvck" />
+              <div className={styles.workItemContent}>
+                <h3>Blvck</h3>
+                <p>Marketing site design and build</p>
+                <button className={styles.expandButton}>↗</button>
+              </div>
             </div>
           </div>
         </section>
