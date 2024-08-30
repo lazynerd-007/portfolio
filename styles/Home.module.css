@@ -64,7 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 15rem;
   background-color: rgba(18, 18, 18, 0.8);
   backdrop-filter: blur(10px);
   position: sticky;
@@ -112,7 +112,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8rem 35rem;
+  padding: 8rem 15rem;
 }
 
 .heroContent {
