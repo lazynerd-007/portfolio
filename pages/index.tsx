@@ -3,6 +3,21 @@ import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/Home.module.css";
 
+interface WorkItem {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+}
+
+const workItems: WorkItem[] = [
+  { id: 1, title: "B&O", description: "Marketing site design and build", image: "/airrupies.png", category: "Branding" },
+  { id: 2, title: "Cozmetic", description: "Marketing site design and build", image: "/tetris-game.png", category: "Product" },
+  { id: 3, title: "Xendou", description: "Marketing site design and build", image: "/background.png", category: "UI/UX" },
+  { id: 4, title: "Blvck", description: "Marketing site design and build", image: "/ui-animations.png", category: "Branding" },
+];
+
 const Home: NextPage = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -60,6 +75,10 @@ const Home: NextPage = () => {
   const handleFilterClick = (filter: string) => {
     setActiveFilter(filter);
   };
+
+  const filteredWorks = activeFilter === "All" 
+    ? workItems 
+    : workItems.filter(item => item.category === activeFilter);
 
   return (
     <div className={styles.container}>
@@ -171,38 +190,18 @@ const Home: NextPage = () => {
             ))}
           </div>
           <div className={styles.workGrid}>
-            <div className={styles.workItem}>
-              <img src="/tetris-game.png" alt="B&O" />
-              <div className={styles.workItemContent}>
-                <h3>B&O</h3>
-                <p>Marketing site design and build</p>
-                <button className={styles.expandButton}>↗</button>
+            {filteredWorks.map((item) => (
+              <div key={item.id} className={styles.workItem}>
+                <div className={styles.workItemInner}>
+                  <img src={item.image} alt={item.title} />
+                  <div className={styles.workItemContent}>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <button className={styles.expandButton}>↗</button>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className={styles.workItem}>
-              <img src="/ui-animations.png" alt="Cozmetic" />
-              <div className={styles.workItemContent}>
-                <h3>Cozmetic</h3>
-                <p>Marketing site design and build</p>
-                <button className={styles.expandButton}>↗</button>
-              </div>
-            </div>
-            <div className={styles.workItem}>
-              <img src="airrupies.png" alt="Xendou" />
-              <div className={styles.workItemContent}>
-                <h3>Xendou</h3>
-                <p>Marketing site design and build</p>
-                <button className={styles.expandButton}>↗</button>
-              </div>
-            </div>
-            <div className={styles.workItem}>
-              <img src="/background.png" alt="Blvck" />
-              <div className={styles.workItemContent}>
-                <h3>Blvck</h3>
-                <p>Marketing site design and build</p>
-                <button className={styles.expandButton}>↗</button>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
       </div>

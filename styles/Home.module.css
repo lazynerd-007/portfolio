@@ -345,23 +345,36 @@
   background-color: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease;
   position: relative;
 }
 
-.workItem:hover {
-  transform: translateY(-5px);
+.workItemInner {
+  transition: transform 0.3s ease;
+}
+
+.workItem:hover .workItemInner {
+  transform: scale(1.05);
 }
 
 .workItem img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .workItemContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 1.5rem;
-  position: relative;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+  transition: opacity 0.3s ease;
+}
+
+.workItem:hover .workItemContent {
+  opacity: 1;
 }
 
 .workItem h3 {
