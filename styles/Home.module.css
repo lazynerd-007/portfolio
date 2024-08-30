@@ -60,24 +60,27 @@
   z-index: 3;
 }
 
+/* ... previous styles remain the same ... */
+
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Changed from space-between to flex-start */
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem 15rem;
   background-color: rgba(18, 18, 18, 0.8);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 0.5px solid #fefce1;
+  border-bottom: 1px solid #fefce1;
 }
 
 .logo {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   font-size: 1.2rem;
   font-weight: bold;
+  margin-right: auto; /* This pushes other elements to the right */
 }
 
 .logoCircle {
@@ -90,6 +93,11 @@
   text-align: center;
   line-height: 30px;
   margin-right: 0.5rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
 }
 
 .navLinks a {
@@ -105,19 +113,25 @@
   padding: 0.5rem 1rem;
   border-radius: 20px;
   cursor: pointer;
+  margin-left: 1.5rem; /* Added margin to separate from nav links */
 }
+
+/* ... rest of the styles remain the same ... */
+
 
 .hero {
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 7rem 15rem;
+  padding: 5rem 10rem; /* Increased from 15rem to 20rem */
 }
 
 .heroContent {
-  max-width: 50%;
+  max-width: 45%; /* Slightly decreased to maintain proportions with increased padding */
 }
+
+
 
 .tagline {
   font-size: 0.9rem;
@@ -156,7 +170,7 @@
 }
 
 .heroImage {
-  width: 45%;
+  width: 45%; /* Maintained at 45% */
   position: relative;
   overflow: hidden;
 }
