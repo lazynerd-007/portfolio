@@ -12,10 +12,10 @@ interface WorkItem {
 }
 
 const workItems: WorkItem[] = [
-  { id: 1, title: "B&O", description: "Marketing site design and build", image: "/airrupies.png", category: "Branding" },
-  { id: 2, title: "Cozmetic", description: "Marketing site design and build", image: "/tetris-game.png", category: "Product" },
-  { id: 3, title: "Xendou", description: "Marketing site design and build", image: "/background.png", category: "UI/UX" },
-  { id: 4, title: "Blvck", description: "Marketing site design and build", image: "/ui-animations.png", category: "Branding" },
+  { id: 1, title: "B&O", description: "Marketing site design and build", image: "/work-1.jpg", category: "Branding" },
+  { id: 2, title: "Cozmetic", description: "Marketing site design and build", image: "/work-2.jpg", category: "Product" },
+  { id: 3, title: "Xendou", description: "Marketing site design and build", image: "/work-3.jpg", category: "UI/UX" },
+  { id: 4, title: "Blvck", description: "Marketing site design and build", image: "/work-4.jpg", category: "Branding" },
 ];
 
 const Home: NextPage = () => {

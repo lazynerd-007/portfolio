@@ -339,6 +339,15 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
 }
 
 .workItem {
@@ -350,6 +359,7 @@
 
 .workItemInner {
   transition: transform 0.3s ease;
+  padding: 1.5rem;
 }
 
 .workItem:hover .workItemInner {
@@ -360,21 +370,12 @@
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .workItemContent {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-  transition: opacity 0.3s ease;
-}
-
-.workItem:hover .workItemContent {
-  opacity: 1;
+  padding-right: 2rem;
 }
 
 .workItem h3 {
@@ -391,18 +392,25 @@
 
 .expandButton {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
   background: none;
-  border: none;
+  border: 1px solid #fefce1;
   color: #fefce1;
   font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .expandButton:hover {
-  transform: translateY(-3px);
+  background-color: #fefce1;
+  color: #121212;
 }
 
 @media (max-width: 1800px) {
