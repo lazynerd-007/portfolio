@@ -64,7 +64,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 10rem;
+  padding: 1rem 1rem;
   background-color: rgba(18, 18, 18, 0.8);
   backdrop-filter: blur(10px);
   position: sticky;
@@ -75,7 +75,7 @@
 
 .logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: 1.2rem;
   font-weight: bold;
 }
