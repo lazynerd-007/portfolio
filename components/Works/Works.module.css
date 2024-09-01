@@ -1,0 +1,156 @@
+.works {
+  min-height: 100vh;
+  padding: 8rem 20rem;
+  background-color: #121212;
+  position: relative;
+  z-index: 2;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #fefce1;
+}
+
+.workFilter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  background-color: rgba(254, 252, 225, 0.05);
+  border-radius: 30px;
+  padding: 0.5rem;
+}
+
+.filterButton {
+  background: none;
+  border: none;
+  color: #fefce1;
+  font-size: 0.9rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.filterActive {
+  background-color: #fefce1;
+  color: #121212;
+}
+
+.workGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.workItem {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.workItemImageWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.workItemImageWrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.workItem:hover .workItemImageWrapper img {
+  transform: scale(1.05);
+}
+
+.workItemContent {
+  padding: 1.5rem;
+}
+
+.workItem h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #fefce1;
+}
+
+.workItem p {
+  font-size: 0.9rem;
+  color: #fefce1;
+  opacity: 0.8;
+}
+
+.expandButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: 1px solid #fefce1;
+  color: #fefce1;
+  font-size: 1.2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.expandButton:hover {
+  background-color: #fefce1;
+  color: #121212;
+}
+
+@media (max-width: 1800px) {
+  .works {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .works {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .works {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .workGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .works {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .workFilter {
+    flex-wrap: wrap;
+  }
+
+  .filterButton {
+    margin: 0.5rem;
+  }
+}
