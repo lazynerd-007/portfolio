@@ -1,0 +1,13 @@
+.container {
+  min-height: 100vh;
+  background-color: #121212;
+  color: #fefce1;
+  overflow-x: hidden;
+}
+
+.main {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,177 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rem 20rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cursorAbout {
+  cursor: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #fefce1;
+  background-color: rgba(254, 252, 225, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.heroContent {
+  max-width: 45%;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #ffd700;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin: 1rem 0;
+}
+
+.description {
+  font-size: 1rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+}
+
+.portfolioButton {
+  background-color: #fefce1;
+  color: #121212;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.emailLink {
+  color: #fefce1;
+  text-decoration: none;
+}
+
+.heroImage {
+  width: 45%;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroImage img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bubbleText {
+  position: absolute;
+  display: inline-block;
+  background-color: rgba(254, 252, 225, 0.2);
+  color: #fefce1;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  backdrop-filter: blur(5px);
+  white-space: nowrap;
+  animation: bounce 3s infinite;
+  cursor: none;
+  transition: background-color 0.3s ease;
+}
+
+.bubbleText:hover {
+  background-color: rgba(254, 252, 225, 0.4);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bubbleText:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.bubbleText:nth-child(2) {
+  top: 70%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.bubbleText:nth-child(3) {
+  top: 40%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+.bubbleText:nth-child(4) {
+  bottom: 15%;
+  left: 25%;
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 1800px) {
+  .hero {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .hero {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-direction: column;
+  }
+
+  .heroContent,
+  .heroImage {
+    max-width: 100%;
+    width: 100%;
+  }
+}
