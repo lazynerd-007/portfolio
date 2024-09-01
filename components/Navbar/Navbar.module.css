@@ -1,0 +1,85 @@
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 20rem;
+  background-color: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #fefce1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: auto;
+}
+
+.logoCircle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fefce1;
+  color: #121212;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 0.5rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks a {
+  margin-left: 1.5rem;
+  color: #fefce1;
+  text-decoration: none;
+}
+
+.hireButton {
+  background-color: #fefce1;
+  color: #121212;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 1.5rem;
+}
+
+@media (max-width: 1800px) {
+  .navbar {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .navbar {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .navLinks {
+    display: none;
+  }
+}

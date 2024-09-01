@@ -1,0 +1,130 @@
+.services {
+  min-height: 100vh;
+  padding: 8rem 20rem;
+  background-color: #1a1a1a;
+  position: relative;
+  z-index: 2;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #fefce1;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.serviceItem {
+  background-color: #222222;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  color: #fefce1;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease;
+}
+
+.serviceItem:hover {
+  background-color: #2a2a2a;
+}
+
+.serviceItem:nth-child(1),
+.serviceItem:nth-child(4) {
+  grid-column: span 4;
+}
+
+.serviceItem:nth-child(2),
+.serviceItem:nth-child(3) {
+  grid-column: span 2;
+}
+
+.serviceNumber {
+  font-size: 0.9rem;
+  color: #fefce1;
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  line-height: 22px;
+  text-align: center;
+  border: 1px solid #fefce1;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.serviceItem:hover .serviceNumber {
+  background-color: #fefce1;
+  color: #222222;
+}
+
+.serviceItem h3 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: #fefce1;
+}
+
+.serviceItem p {
+  font-size: 0.9rem;
+  color: #fefce1;
+  opacity: 0.8;
+  flex-grow: 1;
+}
+
+.arrow {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color: #fefce1;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.serviceItem:hover .arrow {
+  transform: translateX(5px);
+  color: #ffd700;
+}
+
+@media (max-width: 1800px) {
+  .services {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .services {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .services {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceItem:nth-child(1),
+  .serviceItem:nth-child(2),
+  .serviceItem:nth-child(3),
+  .serviceItem:nth-child(4) {
+    grid-column: span 1;
+  }
+}
