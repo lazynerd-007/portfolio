@@ -1,0 +1,175 @@
+.aboutMe {
+  padding: 8rem 20rem;
+  background-color: #121212;
+  color: #fefce1;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+  color: #fefce1;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.profileImage {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.profileImage img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.info {
+  grid-column: 2 / 3;
+}
+
+.info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.experience, .education {
+  margin-top: 2rem;
+}
+
+.experience h4, .education h4, .skills h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.experience ul, .education ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience li, .education li {
+  margin-bottom: 1rem;
+}
+
+.role, .degree {
+  display: block;
+  font-weight: bold;
+}
+
+.company, .school {
+  display: block;
+  font-style: italic;
+}
+
+.period {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.skills ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+.skills li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.viewResume, .getInTouch {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.viewResume {
+  background-color: #fefce1;
+  color: #121212;
+  border: none;
+}
+
+.getInTouch {
+  background-color: transparent;
+  color: #fefce1;
+  border: 1px solid #fefce1;
+}
+
+.viewResume:hover, .getInTouch:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 1200px) {
+  .aboutMe {
+    padding: 6rem 10rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .profileImage {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .info {
+    grid-column: 1 / 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutMe {
+    padding: 4rem 2rem;
+  }
+
+  .skills ul {
+    flex-wrap: wrap;
+  }
+}
