@@ -1,6 +1,6 @@
 .aboutMe {
   padding: 8rem 20rem;
-  background-color: #121212;
+  background-color: #1a1a1a;
   color: #fefce1;
 }
 
@@ -13,35 +13,55 @@
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2rem;
+}
+
+.mainInfo {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 2rem;
+  background-color: #222222;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.profileImageContainer {
+  flex: 0 0 120px;
+  background-color: #1a1a1a;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .profileImage {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-}
-
-.profileImage img {
   width: 100%;
   border-radius: 50%;
 }
 
-.info {
-  grid-column: 2 / 3;
+.intro {
+  flex: 1;
 }
 
-.info h3 {
+.intro h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.info p {
+.intro p {
   margin-bottom: 1rem;
   line-height: 1.6;
 }
 
+.details {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 2rem;
+}
+
 .experience, .education {
-  margin-top: 2rem;
+  flex: 1;
+  background-color: #222222;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .experience h4, .education h4, .skills h4 {
@@ -55,7 +75,16 @@
 }
 
 .experience li, .education li {
+  display: flex;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.companyIcon, .schoolIcon {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  border-radius: 50%;
 }
 
 .role, .degree {
@@ -72,6 +101,13 @@
   display: block;
   font-size: 0.9rem;
   color: #888;
+}
+
+.skills {
+  grid-column: 1 / 2;
+  background-color: #222222;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .skills ul {
@@ -93,14 +129,19 @@
   margin-bottom: 0.5rem;
 }
 
-.stats {
+.statsContainer {
+  grid-column: 2 / 3;
   display: flex;
   justify-content: space-around;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .stat {
+  flex: 1;
   text-align: center;
+  background-color: #222222;
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .statNumber {
@@ -127,11 +168,13 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .viewResume {
   background-color: #fefce1;
-  color: #121212;
+  color: #1a1a1a;
   border: none;
 }
 
@@ -141,35 +184,54 @@
   border: 1px solid #fefce1;
 }
 
+.arrowIcon {
+  width: 20px;
+  height: 20px;
+  margin-left: 0.5rem;
+}
+
 .viewResume:hover, .getInTouch:hover {
   transform: translateY(-3px);
 }
 
+@media (max-width: 1600px) {
+  .aboutMe {
+    padding: 6rem 15rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .aboutMe {
-    padding: 6rem 10rem;
+    padding: 4rem 10rem;
   }
 
   .content {
     grid-template-columns: 1fr;
   }
 
-  .profileImage {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+  .details {
+    flex-direction: column;
   }
 
-  .info {
-    grid-column: 1 / 2;
+  .skills, .statsContainer {
+    grid-column: 1 / -1;
   }
 }
 
 @media (max-width: 768px) {
   .aboutMe {
-    padding: 4rem 2rem;
+    padding: 2rem;
+  }
+
+  .mainInfo {
+    flex-direction: column;
   }
 
   .skills ul {
     flex-wrap: wrap;
+  }
+
+  .statsContainer {
+    flex-direction: column;
   }
 }

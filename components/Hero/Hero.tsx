@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
         </div>
       </div>
       <div className={styles.heroImage}>
-        <img src="/hero-image.jpg" alt="Olyve Schwarz" />
+        <img src="/hero-image.png" alt="Olyve Schwarz" />
         <div className={styles.imageOverlay}>
           {["Brand Research", "Visual Presentation", "Creative Strategy", "User Experience"].map((text, index) => (
             <span 
