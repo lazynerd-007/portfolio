@@ -56,10 +56,18 @@ const AboutMe: React.FC = () => {
         <div className={styles.skillsContainer}>
           <h4>Skills</h4>
           <ul>
-            {['Figma', 'Sketch', 'Webflow', 'Illustrator', 'Framer'].map((skill, index) => (
+            {[
+              { name: 'Figma', icon: '/figma-icon.svg' },
+              { name: 'Sketch', icon: '/sketch-icon.svg' },
+              { name: 'Webflow', icon: '/webflow-icon.svg' },
+              { name: 'Illustrator', icon: '/illustrator-icon.svg' },
+              { name: 'Framer', icon: '/framer-icon.svg' }
+            ].map((skill, index) => (
               <li key={index}>
-                <img src={`/${skill.toLowerCase()}-icon.svg`} alt={skill} />
-                <span>{skill}</span>
+                <div className={styles.skillIconContainer}>
+                  <img src={skill.icon} alt={skill.name} />
+                </div>
+                <span>{skill.name}</span>
               </li>
             ))}
           </ul>
