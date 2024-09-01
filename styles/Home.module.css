@@ -354,28 +354,26 @@
   background-color: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.workItemImageWrapper {
   position: relative;
+  overflow: hidden;
 }
 
-.workItemInner {
-  transition: transform 0.3s ease;
-  padding: 1.5rem;
-}
-
-.workItem:hover .workItemInner {
-  transform: scale(1.05);
-}
-
-.workItem img {
+.workItemImageWrapper img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.workItem:hover .workItemImageWrapper img {
+  transform: scale(1.05);
 }
 
 .workItemContent {
-  padding-right: 2rem;
+  padding: 1.5rem;
 }
 
 .workItem h3 {
@@ -392,8 +390,8 @@
 
 .expandButton {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: 1px solid #fefce1;
   color: #fefce1;
@@ -406,6 +404,7 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 .expandButton:hover {

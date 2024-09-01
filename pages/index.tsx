@@ -23,6 +23,7 @@ const Home: NextPage = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const [isCursorVisible, setIsCursorVisible] = useState(false);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,7 +74,15 @@ const Home: NextPage = () => {
   };
 
   const handleFilterClick = (filter: string) => {
-    setActiveFilter(filter);
+    if (filter !== activeFilter) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveFilter(filter);
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 50);
+      }, 300);
+    }
   };
 
   const filteredWorks = activeFilter === "All" 
@@ -189,16 +198,16 @@ const Home: NextPage = () => {
               </button>
             ))}
           </div>
-          <div className={styles.workGrid}>
+          <div className={`${styles.workGrid} ${isTransitioning ? styles.fadeOut : styles.fadeIn}`}>
             {filteredWorks.map((item) => (
               <div key={item.id} className={styles.workItem}>
-                <div className={styles.workItemInner}>
+                <div className={styles.workItemImageWrapper}>
                   <img src={item.image} alt={item.title} />
-                  <div className={styles.workItemContent}>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <button className={styles.expandButton}>↗</button>
-                  </div>
+                  <button className={styles.expandButton}>↗</button>
+                </div>
+                <div className={styles.workItemContent}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
               </div>
             ))}
