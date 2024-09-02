@@ -14,44 +14,46 @@ const AboutMe: React.FC = () => {
           <p>A product designer with a knack for turning problems and opportunities into clean design solutions.</p>
           <p>As a product designer, I specialize in creating unique visual identities for digital products. I believe that a stunning design starts with common values, open communication, and respect for your audience.</p>
         </div>
-        <div className={styles.experienceContainer}>
-          <h4>Experience</h4>
-          <ul>
-            {[
-              { role: 'Full Time Freelancing', company: 'Self', period: '2019 - Present', image: '/self-icon.png' },
-              { role: 'Senior Product Designer', company: 'Qonto', period: '2020 - 2022', image: '/qonto-icon.png' },
-              { role: 'Creative Head', company: 'Qonto Industries', period: '2019 - 2021', image: '/qonto-industries-icon.png' },
-              { role: 'Design Intern', company: 'Qonto Works', period: '2018 - 2019', image: '/qonto-works-icon.png' },
-            ].map((job, index) => (
-              <li key={index}>
-                <img src={job.image} alt={job.company} className={styles.companyIcon} />
-                <div>
-                  <span className={styles.role}>{job.role}</span>
-                  <span className={styles.company}>{job.company}</span>
-                  <span className={styles.period}>{job.period}</span>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className={styles.educationContainer}>
-          <h4>Education</h4>
-          <ul>
-            {[
-              { degree: 'Master in Design', school: 'Cranfield University, UK', period: '2019 - 2021', image: '/cranfield-icon.png' },
-              { degree: 'MSc in Innovation Design', school: 'QMUL, London, UK', period: '2018 - 2019', image: '/qmul-icon.png' },
-              { degree: 'BSc in IT', school: 'QMUL, London, UK', period: '2015 - 2018', image: '/qmul-icon.png' },
-            ].map((edu, index) => (
-              <li key={index}>
-                <img src={edu.image} alt={edu.school} className={styles.schoolIcon} />
-                <div>
-                  <span className={styles.degree}>{edu.degree}</span>
-                  <span className={styles.school}>{edu.school}</span>
-                  <span className={styles.period}>{edu.period}</span>
-                </div>
-              </li>
-            ))}
-          </ul>
+        <div className={styles.experienceEducationContainer}>
+          <div className={styles.experienceContainer}>
+            <h4>Experience</h4>
+            <ul>
+              {[
+                { role: 'Full Time Freelancing', company: 'Self', period: '2019 - Present', image: '/self-icon.png' },
+                { role: 'Senior Product Designer', company: 'Qonto', period: '2020 - 2022', image: '/qonto-icon.png' },
+                { role: 'Creative Head', company: 'Qonto Industries', period: '2019 - 2021', image: '/qonto-industries-icon.png' },
+                { role: 'Design Intern', company: 'Qonto Works', period: '2018 - 2019', image: '/qonto-works-icon.png' },
+              ].map((job, index) => (
+                <li key={index}>
+                  <img src={job.image} alt={job.company} className={styles.companyIcon} />
+                  <div>
+                    <span className={styles.role}>{job.role}</span>
+                    <span className={styles.company}>{job.company}</span>
+                    <span className={styles.period}>{job.period}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.educationContainer}>
+            <h4>Education</h4>
+            <ul>
+              {[
+                { degree: 'Master in Design', school: 'Cranfield University, UK', period: '2019 - 2021', image: '/cranfield-icon.png' },
+                { degree: 'MSc in Innovation Design', school: 'QMUL, London, UK', period: '2018 - 2019', image: '/qmul-icon.png' },
+                { degree: 'BSc in IT', school: 'QMUL, London, UK', period: '2015 - 2018', image: '/qmul-icon.png' },
+              ].map((edu, index) => (
+                <li key={index}>
+                  <img src={edu.image} alt={edu.school} className={styles.schoolIcon} />
+                  <div>
+                    <span className={styles.degree}>{edu.degree}</span>
+                    <span className={styles.school}>{edu.school}</span>
+                    <span className={styles.period}>{edu.period}</span>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div className={styles.skillsContainer}>
           <h4>Skills</h4>
@@ -87,7 +89,7 @@ const AboutMe: React.FC = () => {
         <button className={styles.viewResume}>View Resume</button>
         <button className={styles.getInTouch}>
           Get in Touch
-          <img src="/arrow-icon.svg" alt="Arrow" className={styles.arrowIcon} />
+          <img src="/message-icon.svg" alt="Message" className={styles.messageIcon} />
         </button>
       </div>
     </section>

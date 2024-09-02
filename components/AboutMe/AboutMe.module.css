@@ -12,25 +12,26 @@
 
 .content {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 3fr; /* 25%-75% split */
   gap: 2rem;
 }
 
 .profileImageContainer {
   grid-column: 1 / 2;
   background-color: #222222;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1 / 1; /* This ensures the container remains square */
+  aspect-ratio: 1 / 1;
+  align-self: start;
 }
 
 .profileImage {
-  width: 100%; /* Changed from 80% to 100% */
-  height: 100%; /* Added to ensure the image fills the container */
-  object-fit: cover; /* This ensures the image covers the area without distortion */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -41,21 +42,29 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* This centers the content vertically */
+  justify-content: flex-start;
 }
 
 .infoContainer h3 {
-  font-size: 1.8rem; /* Increased from 1.5rem */
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
 .infoContainer p {
   margin-bottom: 1rem;
   line-height: 1.6;
-  font-size: 1rem; /* Ensure the font size is appropriate */
+  font-size: 1rem;
+}
+
+.experienceEducationContainer {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .experienceContainer, .educationContainer {
+  flex: 1;
   background-color: #222222;
   padding: 2rem;
   border-radius: 10px;
@@ -105,6 +114,7 @@
   background-color: #222222;
   padding: 2rem;
   border-radius: 10px;
+  margin-top: 2rem;
 }
 
 .skillsContainer h4 {
@@ -152,6 +162,7 @@
   display: flex;
   justify-content: space-around;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .stat {
@@ -202,7 +213,7 @@
   border: 1px solid #fefce1;
 }
 
-.arrowIcon {
+.messageIcon {
   width: 20px;
   height: 20px;
   margin-left: 0.5rem;
@@ -230,10 +241,14 @@
   .profileImageContainer, .infoContainer {
     grid-column: 1 / -1;
   }
-  
+
   .profileImageContainer {
-    max-width: 300px; /* Limit the size on smaller screens */
-    margin: 0 auto; /* Center the image container */
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .experienceEducationContainer {
+    flex-direction: column;
   }
 
   .skillsContainer ul {
