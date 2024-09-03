@@ -1,0 +1,37 @@
+.marqueeContainer {
+  background-color: #2a2a2a; /* A slightly lighter shade that still matches the dark theme */
+  overflow: hidden;
+  padding: 1.5rem 0;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 60s linear infinite;
+}
+
+.marquee span {
+  font-size: 1.8rem;
+  color: #fefce1;
+  padding-right: 4rem;
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marqueeContainer div:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation: marquee 60s linear infinite;
+  animation-delay: -30s;
+}
