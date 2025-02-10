@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.logo}>
-          <img src="/logo.svg" alt="Olyve Schwarz" />
+          <img src="/logo.svg" alt="Babatunde Odunewu" />
         </div>
         <nav className={styles.footerNav}>
           <a href="#services">Services</a>

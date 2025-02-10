@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
     <nav className={styles.navbar}>
       <div className={styles.logo}>
         <span className={styles.logoCircle}>O</span>
-        Olyve Schwarz
+        Babatunde Odunewu
       </div>
       <div className={styles.navLinks}>
         <a href="#services">Services</a>

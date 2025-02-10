@@ -7,10 +7,10 @@ const AboutMe: React.FC = () => {
       <h2 className={styles.sectionTitle}>About Me</h2>
       <div className={styles.content}>
         <div className={styles.profileImageContainer}>
-          <img src="/profile-image.jpg" alt="Olyve Schwarz" className={styles.profileImage} />
+          <img src="/profile-image.jpg" alt="Babatunde Odunewu" className={styles.profileImage} />
         </div>
         <div className={styles.infoContainer}>
-          <h3>Hi 👋 I am Olyve Schwarz</h3>
+          <h3>Hi 👋 I am Babatunde Odunewu</h3>
           <p>A product designer with a knack for turning problems and opportunities into clean design solutions.</p>
           <p>As a product designer, I specialize in creating unique visual identities for digital products. I believe that a stunning design starts with common values, open communication, and respect for your audience.</p>
         </div>
