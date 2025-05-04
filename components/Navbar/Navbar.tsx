@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
         <a href="#works">Works</a>
         <a href="#about">About</a>
         <a href="#testimonials">Testimonials</a>
-        <a href="#contact">"Say Hello"</a>
+        <a href="#contact">&quot;Say Hello&quot;</a>
       </div>
       <button className={styles.hireButton}>Hire Me</button>
     </nav>
