@@ -3,14 +3,14 @@ import styles from './Works.module.css';
 import { WorkItem } from '../../types';
 
 const workItems: WorkItem[] = [
-  { id: 1, title: "B&O", description: "Marketing site design and build", image: "/airrupies.png", category: "Branding" },
-  { id: 2, title: "Cozmetic", description: "Marketing site design and build", image: "/ui-animations.png", category: "Product" },
-  { id: 3, title: "Xendou", description: "Marketing site design and build", image: "/work-3.jpg", category: "UI/UX" },
-  { id: 4, title: "Blvck", description: "Marketing site design and build", image: "/work-4.jpg", category: "Branding" },
+  { id: 1, title: &quot;B&O&quot;, description: &quot;Marketing site design and build&quot;, image: &quot;/airrupies.png&quot;, category: &quot;Branding&quot; },
+  { id: 2, title: &quot;Cozmetic&quot;, description: &quot;Marketing site design and build&quot;, image: &quot;/ui-animations.png&quot;, category: &quot;Product&quot; },
+  { id: 3, title: &quot;Xendou&quot;, description: &quot;Marketing site design and build&quot;, image: &quot;/work-3.jpg&quot;, category: &quot;UI/UX&quot; },
+  { id: 4, title: &quot;Blvck&quot;, description: &quot;Marketing site design and build&quot;, image: &quot;/work-4.jpg&quot;, category: &quot;Branding&quot; },
 ];
 
 const Works: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState(&quot;All&quot;);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleFilterClick = (filter: string) => {
@@ -25,7 +25,7 @@ const Works: React.FC = () => {
     }
   };
 
-  const filteredWorks = activeFilter === "All" 
+  const filteredWorks = activeFilter === &quot;All&quot; 
     ? workItems 
     : workItems.filter(item => item.category === activeFilter);
 
@@ -33,7 +33,7 @@ const Works: React.FC = () => {
     <section id="works" className={styles.works}>
       <h2 className={styles.sectionTitle}>Works</h2>
       <div className={styles.workFilter}>
-        {["All", "Branding", "Product", "UI/UX"].map((filter) => (
+        {[&quot;All&quot;, &quot;Branding&quot;, &quot;Product&quot;, &quot;UI/UX&quot;].map((filter) => (
           <button
             key={filter}
             className={`${styles.filterButton} ${activeFilter === filter ? styles.filterActive : ''}`}
