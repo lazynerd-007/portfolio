@@ -14,6 +14,7 @@ const Navbar: React.FC = () => {
         <a href="#about">About</a>
         <a href="#testimonials">Testimonials</a>
         <a href="#contact">&quot;Say Hello&quot;</a>
+        <a href="/resume/Babatunde_Odunewu_-_Product_Owner__Agile_Project_Management__Team_Leadership_PM.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </div>
       <button className={styles.hireButton}>Hire Me</button>
     </nav>

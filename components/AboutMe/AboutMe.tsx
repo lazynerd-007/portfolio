@@ -76,17 +76,17 @@ const AboutMe: React.FC = () => {
         </div>
         <div className={styles.statsContainer}>
           <div className={styles.stat}>
-            <span className={styles.statNumber}>12</span>
+            <span className={styles.statNumber}>8</span>
             <span className={styles.statLabel}>Years of Experience</span>
           </div>
           <div className={styles.stat}>
-            <span className={styles.statNumber}>3K</span>
+            <span className={styles.statNumber}>15</span>
             <span className={styles.statLabel}>Projects Completed</span>
           </div>
         </div>
       </div>
       <div className={styles.actions}>
-        <button className={styles.viewResume}>View Resume</button>
+        <a href="/resume/Babatunde_Odunewu_-_Product_Owner__Agile_Project_Management__Team_Leadership_PM.pdf" target="_blank" rel="noopener noreferrer" className={styles.viewResume}>View Resume</a>
         <button className={styles.getInTouch}>
           Get in Touch
           <img src="/message-icon.svg" alt="Message" className={styles.messageIcon} />

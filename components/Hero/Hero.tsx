@@ -28,14 +28,19 @@ function Hero() {
     
     // Hero content
     React.createElement('div', { key: 'content', className: styles.heroContent }, [
-      React.createElement('span', { key: 'tagline', className: styles.tagline }, '✨ Award Winning Branding Expert'),
       React.createElement('h1', { key: 'title', className: styles.title }, 'Bring your vision to ultimate reality'),
       React.createElement('p', { key: 'desc', className: styles.description }, 
         'Specialize in creating unique visual identities for digital products and believe that a stunning design starts with common values, open communication, and respect for your audience.'
       ),
       React.createElement('div', { key: 'cta', className: styles.cta }, [
-        React.createElement('button', { key: 'btn', className: styles.portfolioButton }, 'View Portfolio'),
-        React.createElement('a', { key: 'email', href: 'mailto:Hello@olyve.me', className: styles.emailLink }, 'Hello@olyve.me')
+        React.createElement('a', { 
+          key: 'portfolio',
+          href: 'https://github.com/lazynerd-007', 
+          target: '_blank',
+          rel: 'noopener noreferrer',
+          className: styles.portfolioButton 
+        }, 'View Portfolio'),
+        React.createElement('a', { key: 'email', href: 'mailto:Hello@babsfauwaz.com', className: styles.emailLink }, 'Hello@babsfauwaz.com')
       ])
     ]),
     
@@ -43,7 +48,7 @@ function Hero() {
     React.createElement('div', { key: 'image', className: styles.heroImage }, [
       React.createElement('img', { key: 'img', src: '/hero-image.png', alt: 'Babatunde Odunewu' }),
       React.createElement('div', { key: 'overlay', className: styles.imageOverlay }, 
-        ["Brand Research", "Visual Presentation", "Creative Strategy", "User Experience"].map((text, index) => 
+        ["Brand Research", "Visual Presentation", "Creative Strategy", "System Architecture"].map((text, index) => 
           React.createElement('span', {
             key: index,
             className: styles.bubbleText,
