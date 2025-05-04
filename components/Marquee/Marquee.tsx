@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Marquee.module.css';
 
 const Marquee: React.FC = () => {
-  const content = "Let's work together ✌️ ";
+  const content = "Let&apos;s work together ✌️ ";
   const repeatedContent = content.repeat(10); // Repeat the content to ensure continuous flow
 
   return (

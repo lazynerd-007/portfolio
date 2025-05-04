@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   };
 
   const handleBubbleClick = () => {
-    alert("Thank you for your interest! I'm available for hire. Let's discuss your project.");
+    alert("Thank you for your interest! I&apos;m available for hire. Let&apos;s discuss your project.");
   };
 
   return (
@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
       <div className={styles.heroImage}>
         <img src="/hero-image.png" alt="Babatunde Odunewu" />
         <div className={styles.imageOverlay}>
-          {["Brand Research", "Visual Presentation", "Creative Strategy", "User Experience"].map((text, index) => (
+          {[&quot;Brand Research&quot;, &quot;Visual Presentation&quot;, &quot;Creative Strategy&quot;, &quot;User Experience&quot;].map((text, index) => (
             <span 
               key={index}
               className={styles.bubbleText} 

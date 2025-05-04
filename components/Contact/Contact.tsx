@@ -27,8 +27,8 @@ const Contact: React.FC = () => {
     <section id="contact" className={styles.contact}>
       <div className={styles.contactContent}>
         <div className={styles.contactInfo}>
-          <h2>It's time to talk about your project.</h2>
-          <p>Let's embark on creative journey together by shaping a visual narrative of your brand in the crowded digital space.</p>
+          <h2>It&apos;s time to talk about your project.</h2>
+          <p>Let&apos;s embark on creative journey together by shaping a visual narrative of your brand in the crowded digital space.</p>
           <div className={styles.contactDetails}>
             <div className={styles.contactItem}>
               <img src="/phone-icon.svg" alt="Phone" />
