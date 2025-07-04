@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './AboutMe.module.css';
 
 const AboutMe: React.FC = () => {
@@ -7,7 +8,14 @@ const AboutMe: React.FC = () => {
       <h2 className={styles.sectionTitle}>About Me</h2>
       <div className={styles.content}>
         <div className={styles.profileImageContainer}>
-          <img src="/profile-image.jpg" alt="Babatunde Odunewu" className={styles.profileImage} />
+          <Image 
+            src="/profile-image.jpg" 
+            alt="Babatunde Odunewu" 
+            className={styles.profileImage}
+            width={300}
+            height={300}
+            style={{ width: '100%', height: 'auto' }}
+          />
         </div>
         <div className={styles.infoContainer}>
           <h3>Hi 👋 I am Babatunde Odunewu</h3>
@@ -25,7 +33,13 @@ const AboutMe: React.FC = () => {
                 { role: 'Design Intern', company: 'Qonto Works', period: '2018 - 2019', image: '/qonto-works-icon.png' },
               ].map((job, index) => (
                 <li key={index}>
-                  <img src={job.image} alt={job.company} className={styles.companyIcon} />
+                  <Image 
+                    src={job.image} 
+                    alt={job.company} 
+                    className={styles.companyIcon}
+                    width={40}
+                    height={40}
+                  />
                   <div>
                     <span className={styles.role}>{job.role}</span>
                     <span className={styles.company}>{job.company}</span>
@@ -44,7 +58,13 @@ const AboutMe: React.FC = () => {
                 { degree: 'BSc in IT', school: 'QMUL, London, UK', period: '2015 - 2018', image: '/qmul-icon.png' },
               ].map((edu, index) => (
                 <li key={index}>
-                  <img src={edu.image} alt={edu.school} className={styles.schoolIcon} />
+                  <Image 
+                    src={edu.image} 
+                    alt={edu.school} 
+                    className={styles.schoolIcon}
+                    width={40}
+                    height={40}
+                  />
                   <div>
                     <span className={styles.degree}>{edu.degree}</span>
                     <span className={styles.school}>{edu.school}</span>
@@ -67,7 +87,12 @@ const AboutMe: React.FC = () => {
             ].map((skill, index) => (
               <li key={index}>
                 <div className={styles.skillIconContainer}>
-                  <img src={skill.icon} alt={skill.name} />
+                  <Image 
+                    src={skill.icon} 
+                    alt={skill.name}
+                    width={32}
+                    height={32}
+                  />
                 </div>
                 <span>{skill.name}</span>
               </li>
@@ -89,7 +114,13 @@ const AboutMe: React.FC = () => {
         <a href="/resume/Babatunde_Odunewu_-_Product_Owner__Agile_Project_Management__Team_Leadership_PM.pdf" target="_blank" rel="noopener noreferrer" className={styles.viewResume}>View Resume</a>
         <button className={styles.getInTouch}>
           Get in Touch
-          <img src="/message-icon.svg" alt="Message" className={styles.messageIcon} />
+          <Image 
+            src="/message-icon.svg" 
+            alt="Message" 
+            className={styles.messageIcon}
+            width={16}
+            height={16}
+          />
         </button>
       </div>
     </section>

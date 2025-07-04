@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import styles from './Contact.module.css';
 
 const Contact: React.FC = () => {
@@ -31,15 +32,15 @@ const Contact: React.FC = () => {
           <p>Let&apos;s embark on creative journey together by shaping a visual narrative of your brand in the crowded digital space.</p>
           <div className={styles.contactDetails}>
             <div className={styles.contactItem}>
-              <img src="/phone-icon.svg" alt="Phone" />
+              <Image src="/phone-icon.svg" alt="Phone" width={20} height={20} />
               <span>+01 234 567 8902</span>
             </div>
             <div className={styles.contactItem}>
-              <img src="/email-icon.svg" alt="Email" />
+              <Image src="/email-icon.svg" alt="Email" width={20} height={20} />
               <span>sayhello@olyveschwarz.me</span>
             </div>
             <div className={styles.contactItem}>
-              <img src="/address-icon.svg" alt="Address" />
+              <Image src="/address-icon.svg" alt="Address" width={20} height={20} />
               <span>Borough 47, Aveton Gifford,<br />Devon, UK, EX4 1QU</span>
             </div>
           </div>

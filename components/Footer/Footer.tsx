@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const Footer: React.FC = () => {
@@ -10,7 +11,7 @@ const Footer: React.FC = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.logo}>
-          <img src="/logo.svg" alt="Babatunde Odunewu" />
+          <Image src="/logo.svg" alt="Babatunde Odunewu" width={120} height={40} />
         </div>
         <nav className={styles.footerNav}>
           <a href="#services">Services</a>
@@ -21,16 +22,16 @@ const Footer: React.FC = () => {
         </nav>
         <div className={styles.socialLinks}>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <img src="/instagram-icon.svg" alt="Instagram" />
+            <Image src="/instagram-icon.svg" alt="Instagram" width={24} height={24} />
           </a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <img src="/twitter-icon.svg" alt="Twitter" />
+            <Image src="/twitter-icon.svg" alt="Twitter" width={24} height={24} />
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-            <img src="/linkedin-icon.svg" alt="LinkedIn" />
+            <Image src="/linkedin-icon.svg" alt="LinkedIn" width={24} height={24} />
           </a>
           <a href="https://behance.net" target="_blank" rel="noopener noreferrer">
-            <img src="/behance-icon.svg" alt="Behance" />
+            <Image src="/behance-icon.svg" alt="Behance" width={24} height={24} />
           </a>
         </div>
         <div className={styles.copyright}>
@@ -38,7 +39,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <button className={styles.backToTop} onClick={scrollToTop} aria-label="Back to top">
-        <img src="/arrow-up-icon.svg" alt="Back to Top" />
+        <Image src="/arrow-up-icon.svg" alt="Back to Top" width={16} height={16} />
       </button>
     </footer>
   );
