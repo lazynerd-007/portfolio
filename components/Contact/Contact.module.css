@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   gap: 4rem;
+  align-items: flex-start;
 }
 
 .contactInfo {
@@ -17,12 +18,14 @@
 .contactInfo h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .contactInfo p {
   font-size: 1rem;
   margin-bottom: 2rem;
   opacity: 0.8;
+  line-height: 1.6;
 }
 
 .contactDetails {
@@ -40,6 +43,11 @@
 .contactItem img {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
+}
+
+.contactItem span {
+  line-height: 1.4;
 }
 
 .formContainer {
@@ -114,20 +122,263 @@
 
 .sendMessage:hover {
   transform: translateY(-3px);
+  background-color: #e0e0c0;
 }
 
-@media (max-width: 1200px) {
+/* Responsive Breakpoints */
+@media (max-width: 1800px) {
+  .contact {
+    padding: 6rem 15rem;
+  }
+}
+
+@media (max-width: 1400px) {
   .contact {
     padding: 6rem 10rem;
   }
 
+  .contactInfo h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    padding: 6rem 5rem;
+  }
+
+  .contactInfo h2 {
+    font-size: 2rem;
+  }
+
   .contactContent {
     flex-direction: column;
+    gap: 3rem;
+  }
+
+  .formContainer {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .contact {
     padding: 4rem 2rem;
+  }
+
+  .contactInfo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contactContent {
+    gap: 2.5rem;
+  }
+
+  .contactDetails {
+    gap: 0.75rem;
+  }
+
+  .contactItem {
+    gap: 0.75rem;
+  }
+
+  .contactItem img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contactItem span {
+    font-size: 0.9rem;
+  }
+
+  .formContainer {
+    padding: 1.5rem;
+  }
+
+  .contactForm {
+    gap: 1.25rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.9rem;
+  }
+
+  .formGroup textarea {
+    min-height: 80px;
+  }
+
+  .sendMessage {
+    align-self: stretch;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact {
+    padding: 3rem 1.5rem;
+  }
+
+  .contactInfo h2 {
+    font-size: 1.6rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.85rem;
+  }
+
+  .contactContent {
+    gap: 2rem;
+  }
+
+  .contactItem span {
+    font-size: 0.85rem;
+  }
+
+  .formContainer {
+    padding: 1.25rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+  }
+
+  .formGroup label {
+    font-size: 0.85rem;
+    top: 0.4rem;
+  }
+
+  .formGroup input:focus + label,
+  .formGroup textarea:focus + label,
+  .formGroup input:not(:placeholder-shown) + label,
+  .formGroup textarea:not(:placeholder-shown) + label {
+    top: -0.9rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 2.5rem 1rem;
+  }
+
+  .contactInfo h2 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .contactInfo p {
+    font-size: 0.8rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .contactContent {
+    gap: 1.75rem;
+  }
+
+  .contactDetails {
+    gap: 0.6rem;
+  }
+
+  .contactItem {
+    gap: 0.6rem;
+    align-items: flex-start;
+  }
+
+  .contactItem img {
+    width: 16px;
+    height: 16px;
+    margin-top: 0.1rem;
+  }
+
+  .contactItem span {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+
+  .formContainer {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .contactForm {
+    gap: 1rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.8rem;
+    padding: 0.35rem 0;
+  }
+
+  .formGroup textarea {
+    min-height: 70px;
+  }
+
+  .sendMessage {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.85rem;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .contact {
+    padding: 2rem 0.75rem;
+  }
+
+  .contactInfo h2 {
+    font-size: 1.2rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .contactContent {
+    gap: 1.5rem;
+  }
+
+  .contactItem span {
+    font-size: 0.75rem;
+  }
+
+  .formContainer {
+    padding: 0.75rem;
+  }
+
+  .contactForm {
+    gap: 0.75rem;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 0.75rem;
+    padding: 0.3rem 0;
+  }
+
+  .formGroup label {
+    font-size: 0.75rem;
+    top: 0.3rem;
+  }
+
+  .formGroup textarea {
+    min-height: 60px;
+  }
+
+  .sendMessage {
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
   }
 }

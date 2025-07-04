@@ -42,17 +42,21 @@
 .title {
   font-size: 3.5rem;
   margin: 1rem 0;
+  line-height: 1.1;
 }
 
 .description {
   font-size: 1rem;
   max-width: 600px;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .cta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .portfolioButton {
@@ -62,8 +66,13 @@
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
-  margin-right: 1rem;
   text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.portfolioButton:hover {
+  background-color: #e0e0c0;
 }
 
 .resumeButton {
@@ -73,13 +82,24 @@
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
-  margin-right: 1rem;
   text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.resumeButton:hover {
+  background-color: #fefce1;
+  color: #121212;
 }
 
 .emailLink {
   color: #fefce1;
   text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.emailLink:hover {
+  opacity: 0.7;
 }
 
 .heroImage {
@@ -153,6 +173,7 @@
   animation-delay: 1.5s;
 }
 
+/* Responsive Breakpoints */
 @media (max-width: 1800px) {
   .hero {
     padding-left: 15rem;
@@ -165,6 +186,10 @@
     padding-left: 10rem;
     padding-right: 10rem;
   }
+
+  .title {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -172,18 +197,166 @@
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
+  .title {
+    font-size: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 4rem 2rem;
     flex-direction: column;
+    gap: 3rem;
+    text-align: center;
   }
 
   .heroContent,
   .heroImage {
     max-width: 100%;
     width: 100%;
+  }
+
+  .heroContent {
+    order: 1;
+  }
+
+  .heroImage {
+    order: 2;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .cta {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .portfolioButton,
+  .resumeButton {
+    width: 100%;
+    max-width: 250px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+  }
+
+  .emailLink {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  /* Hide bubbles on mobile for better performance */
+  .bubbleText {
+    display: none;
+  }
+
+  /* Disable cursor effects on mobile */
+  .cursorAbout {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin: 0.75rem 0;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolioButton,
+  .resumeButton {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .heroImage {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .cta {
+    gap: 0.75rem;
+  }
+
+  .portfolioButton,
+  .resumeButton {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .emailLink {
+    font-size: 0.8rem;
+  }
+
+  .heroImage {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    padding: 2rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .portfolioButton,
+  .resumeButton {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+    max-width: 200px;
+  }
+
+  .emailLink {
+    font-size: 0.75rem;
+  }
+
+  .heroImage {
+    max-width: 240px;
   }
 }

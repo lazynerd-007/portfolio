@@ -10,6 +10,7 @@
   font-size: 2.5rem;
   margin-bottom: 4rem;
   color: #fefce1;
+  text-align: center;
 }
 
 .workFilter {
@@ -19,6 +20,8 @@
   background-color: rgba(254, 252, 225, 0.05);
   border-radius: 30px;
   padding: 0.5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .filterButton {
@@ -31,6 +34,12 @@
   padding: 0.5rem 1rem;
   border-radius: 20px;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.filterButton:hover {
+  background-color: rgba(254, 252, 225, 0.1);
 }
 
 .filterActive {
@@ -57,16 +66,24 @@
   background-color: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .workItemImageWrapper {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 4/3;
 }
 
 .workItemImageWrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -83,12 +100,14 @@
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   color: #fefce1;
+  line-height: 1.3;
 }
 
 .workItem p {
   font-size: 0.9rem;
   color: #fefce1;
   opacity: 0.8;
+  line-height: 1.5;
 }
 
 .expandButton {
@@ -115,6 +134,7 @@
   color: #121212;
 }
 
+/* Responsive Breakpoints */
 @media (max-width: 1800px) {
   .works {
     padding-left: 15rem;
@@ -127,6 +147,10 @@
     padding-left: 10rem;
     padding-right: 10rem;
   }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -135,22 +159,195 @@
     padding-right: 5rem;
   }
 
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
   .workGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
   .works {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 4rem 2rem;
+    min-height: auto;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
   }
 
   .workFilter {
     flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+    padding: 0.75rem;
+    border-radius: 20px;
   }
 
   .filterButton {
-    margin: 0.5rem;
+    margin: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .workGrid {
+    gap: 1.25rem;
+  }
+
+  .workItemContent {
+    padding: 1.25rem;
+  }
+
+  .workItem h3 {
+    font-size: 1.1rem;
+  }
+
+  .workItem p {
+    font-size: 0.85rem;
+  }
+
+  .expandButton {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .works {
+    padding: 3rem 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .workFilter {
+    margin-bottom: 2.5rem;
+    padding: 0.5rem;
+  }
+
+  .filterButton {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    margin: 0.2rem;
+  }
+
+  .workGrid {
+    gap: 1rem;
+  }
+
+  .workItemContent {
+    padding: 1rem;
+  }
+
+  .workItem h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .workItem p {
+    font-size: 0.8rem;
+  }
+
+  .expandButton {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .works {
+    padding: 2.5rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .workFilter {
+    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .filterButton {
+    margin: 0;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .workGrid {
+    gap: 0.75rem;
+  }
+
+  .workItemContent {
+    padding: 0.75rem;
+  }
+
+  .workItem h3 {
+    font-size: 0.95rem;
+  }
+
+  .workItem p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .works {
+    padding: 2rem 0.75rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .workFilter {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  .filterButton {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .workGrid {
+    gap: 0.5rem;
+  }
+
+  .workItemContent {
+    padding: 0.6rem;
+  }
+
+  .workItem h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .workItem p {
+    font-size: 0.7rem;
+  }
+
+  .expandButton {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.8rem;
   }
 }

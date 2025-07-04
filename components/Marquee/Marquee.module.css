@@ -35,3 +35,48 @@
   animation: marquee 60s linear infinite;
   animation-delay: -30s;
 }
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .marqueeContainer {
+    padding: 1.25rem 0;
+  }
+
+  .marquee span {
+    font-size: 1.4rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .marqueeContainer {
+    padding: 1rem 0;
+  }
+
+  .marquee span {
+    font-size: 1.2rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marqueeContainer {
+    padding: 0.875rem 0;
+  }
+
+  .marquee span {
+    font-size: 1rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .marqueeContainer {
+    padding: 0.75rem 0;
+  }
+
+  .marquee span {
+    font-size: 0.9rem;
+    padding-right: 1.5rem;
+  }
+}
